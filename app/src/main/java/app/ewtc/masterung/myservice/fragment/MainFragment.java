@@ -40,6 +40,12 @@ public class MainFragment extends Fragment{
             @Override
             public void onClick(View view) {
 
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.contentFragmentMain, new SecondFragment())
+                        .addToBackStack(null)
+                        .commit();
+
             }
         });
 
